@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vermaji Restaurant & Hotel</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fafafa; color: #333; }
+    header { background: #8B0000; color: #fff; padding: 1rem; text-align: center; }
+    header h1 { margin: 0; font-size: 1.8rem; }
+    nav { background: #333; display: flex; justify-content: center; }
+    nav a { color: #fff; text-decoration: none; padding: 0.8rem 1rem; display: block; }
+    nav a:hover { background: #8B0000; }
+    .container { padding: 1.5rem; }
+    .menu-section { margin-bottom: 2rem; }
+    .menu-section h2 { border-bottom: 2px solid #8B0000; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+    .dish { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid #ddd; }
+    .dish button { background: #8B0000; color: #fff; border: none; padding: 0.4rem 0.8rem; cursor: pointer; border-radius: 5px; }
+    .dish button:hover { background: #b30000; }
+    footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+    .hero { background: url('https://source.unsplash.com/1600x600/?restaurant,food') no-repeat center/cover; color: #fff; text-align: center; padding: 4rem 2rem; }
+    .hero h2 { font-size: 2rem; }
+  </style>
+  <script>
+    function orderNow(item) {
+      let phone = '+916266242496 // Replace with your WhatsApp number
+      let url = `https://wa.me/${phone}?text=I%20want%20to%20order:%20${encodeURIComponent(item)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>🍴 Vermaji Restaurant & Hotel</h1>
+    <p>Good Food, Good Drinks, Great Stays</p>
+  </header>
+
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#hotel">Hotel</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Welcome to Vermaji Restaurant</h2>
+    <p>Delicious food, fine drinks & relaxing stays</p>
+  </div>
+
+  <div class="container">
+    <section id="menu" class="menu-section">
+      <h2>Veg Menu</h2>
+      <div class="dish"><span>Paneer Butter Masala</span><button onclick="orderNow('Paneer Butter Masala')">Order</button></div>
+      <div class="dish"><span>Dal Tadka</span><button onclick="orderNow('Dal Tadka')">Order</button></div>
+      <div class="dish"><span>Veg Biryani</span><button onclick="orderNow('Veg Biryani')">Order</button></div>
+    </section>
+
+    <section class="menu-section">
+      <h2>Non-Veg Menu</h2>
+      <div class="dish"><span>Chicken Curry</span><button onclick="orderNow('Chicken Curry')">Order</button></div>
+      <div class="dish"><span>Mutton Rogan Josh</span><button onclick="orderNow('Mutton Rogan Josh')">Order</button></div>
+      <div class="dish"><span>Fish Fry</span><button onclick="orderNow('Fish Fry')">Order</button></div>
+    </section>
+
+    <section class="menu-section">
+      <h2>Drinks</h2>
+      <div class="dish"><span>Royal Stag Whisky</span><button onclick="orderNow('Royal Stag Whisky')">Order</button></div>
+      <div class="dish"><span>Blenders Pride</span><button onclick="orderNow('Blenders Pride')">Order</button></div>
+      <div class="dish"><span>Beer (Choice)</span><button onclick="orderNow('Beer')">Order</button></div>
+    </section>
+
+    <section id="hotel" class="menu-section">
+      <h2>Hotel & Terrace Cinema</h2>
+      <p>Stay in our theme-based rooms and enjoy open-air terrace cinema nights under the stars 🌙✨</p>
+    </section>
+
+    <section id="contact" class="menu-section">
+      <h2>Contact Us</h2>
+      <p>📍 Location: Vermaji Restaurant,omkareshwar road near rj trater
+      <p>📞 Phone: +91-6266242496</p>
+      <p>📱 WhatsApp Orders: Click order button in menu</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Vermaji Restaurant & Hotel | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
